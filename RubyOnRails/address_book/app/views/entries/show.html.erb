@@ -1,0 +1,43 @@
+<div id="notice">
+	<%= notice %><br />
+	<br />
+</div>
+
+<div class="avatar">
+	<%= cl_image_tag((@entry.avatar.blank? ? "person_vahdmw.png" : @entry.avatar), :width => 310, :alt => "default image") %>
+  <h2><%=h @entry.full_name %></h2>
+  <%= @entry.title %>
+</div>
+<!--begin details column-->
+<div class="details">	
+	<div class="addresses">
+	 <h2>Addresses</h2>
+	 <% for address in @entry.addresses %>
+		 <strong><%=h address.address_type %></strong><br />
+		 <%=h address.street %><br />
+		 <%=h address.city %>, <%=h address.state %> <%=h address.zip %><br />
+	 <% end %>
+	</div>
+	<%- if @entry.send(:emails).count > 0 %>
+		<div class="emails">
+		 <h2>Email</h2>
+		 <% for email in @entry.emails %>
+			 <strong><%=h email.address_type %></strong> <%=h mail_to "#{email.email}" %><br />
+		 <% end %>  
+		</div>
+	<% end %>
+	<%- if @entry.send(:webs).count > 0 %>
+		<div class="webs">
+		 <h2>Web</h2>
+		 <% for web in @entry.webs %>
+			 <strong><%=h web.address_type %></strong> <%=h link_to "#{web.web}", "http://#{web.web}" %><br />
+		 <% end %>  
+		</div>
+	<% end %>
+</div>
+<!--end details column-->
+<br />
+<div class="buttons">
+ <%= button_to 'Edit', edit_entry_path(@entry), :method => :get %>
+ <%= button_to 'Delete', @entry, :method => :delete %>
+</div>

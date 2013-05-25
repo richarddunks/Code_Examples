@@ -1,0 +1,6 @@
+('A'..'Z').each do |i| #using range operator in Ruby
+	#for when you select an index key
+	- iskey = params[:initial] == i
+	li class=(iskey? 'select' : '')
+		=link_to i, entries_path(initial: i)
+end

@@ -1,0 +1,6 @@
+<fieldset class="email">
+  <legend><h2>Email</h2></legend>
+  <%= f.association :address_type %>
+  <%= f.input :email, placeholder: 'user@domain.com' %>
+	<%= render "delete", f: f %>
+</fieldset>

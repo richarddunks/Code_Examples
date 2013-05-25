@@ -1,0 +1,65 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+valid:
+  address_type: <%= AddressType.first %> #erb tag to pull in addressType
+  street: 100 Elm St.
+  city: Anytown
+  state: PA
+  zip: 10234
+  entry: valid
+
+no_street:
+  address_type: <%= AddressType.first %>
+  street: 
+  city: Anytown
+  state: PA
+  zip: 10234
+  entry: valid
+
+no_city:
+  address_type: <%= AddressType.first %>
+  street: 100 Elm St.
+  city: 
+  state: PA
+  zip: 10234
+  entry: valid
+
+no_state:
+  address_type: <%= AddressType.first %>
+  street: 100 Elm St.
+  city: Anytown
+  state: 
+  zip: 10234
+  entry: valid
+
+no_zip: 
+  address_type: <%= AddressType.first %>
+  street: 100 Elm St.
+  city: Anytown
+  state: PA
+  zip: 
+  entry: valid
+
+bad_zip:
+  address_type: <%= AddressType.first %>
+  street: 100 Elm St.
+  city: Anytown
+  state: PA
+  zip: AE123
+  entry: valid
+
+long_zip:
+  address_type: <%= AddressType.first %>
+  street: 100 Elm St.
+  city: Anytown
+  state: PA
+  zip: 234536
+  entry: valid	
+
+empty:
+  address_type: <%= AddressType.first %>
+  street: 
+  city: 
+  state: 
+  zip: 
+  entry: valid

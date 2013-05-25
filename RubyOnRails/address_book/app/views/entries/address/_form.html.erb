@@ -1,0 +1,9 @@
+<fieldset class="address">
+  <legend><h2>Address</h2></legend>
+  <%= f.association :address_type %><br />
+  <%= f.input :street, input_html: {rows: 3} %>
+  <%= f.input :city, input_html: {size: 40} %>
+  <%= f.input :state, input_html: {maxlength: 2, size: 2} %>
+  <%= f.input :zip, input_html: {maxlength: 5, size: 6}, as: :string %>
+	<%= render "delete", f: f %>
+</fieldset>

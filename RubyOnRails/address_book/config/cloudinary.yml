@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: ulysseous
+  api_key: '498578747761142'
+  api_secret: WElPIhiUAV-3NUsZUdqDGijBJj8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: ulysseous
+  api_key: '498578747761142'
+  api_secret: WElPIhiUAV-3NUsZUdqDGijBJj8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: ulysseous
+  api_key: '498578747761142'
+  api_secret: WElPIhiUAV-3NUsZUdqDGijBJj8
+  enhance_image_tag: true
+  static_image_support: false

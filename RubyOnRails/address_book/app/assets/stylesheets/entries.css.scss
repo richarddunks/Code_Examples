@@ -1,0 +1,12 @@
+// Place all the styles related to the entries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+form.button_to {
+	margin:0;
+	padding:0;
+	display:inline;
+}
+
+form.button_to div, form.button_to div input {
+	display:inline;
+}

@@ -1,0 +1,13 @@
+<ul id="tab">
+	<% ('A'..'Z').each do |i| %> 
+		<%-iskey = params[:initial] == i -%>
+		<li<%= ' class=selected' if iskey%>> 
+			<%= link_to i, entries_path(initial: i) %>
+		</li>
+	<% end %>
+</ul>
+<ul id="entries">
+	<% @entries.each do |entry| %>
+		<%= render 'index_entry', entry: entry %>
+	<% end %>
+</ul>

@@ -1,0 +1,110 @@
+// ---------------------------------------------------------------------------
+// Imports
+@import "partials/base";
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+
+body
+{
+  padding: 0.5em;
+//  @include susy-grid-background;
+}
+
+#content
+{
+	@include container;
+//  @include susy-grid-background;
+	border: 1px solid $bordercolor;
+  border-radius: 10px;
+	padding: 0;
+  max-width: 80em;
+  _width: 80em;
+}
+
+.cover-image
+{
+	margin-top:1em;
+}
+
+header 
+{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+  padding: 0.5em;
+  background: $highlight;
+  clear: both;
+  h1
+  {
+  	margin-top:0;
+  	margin-bottom: 0;
+  	text-align:center;
+  }
+}
+
+.selected
+{
+	color: $highlight;
+	background-color: $bgcolor;
+	a
+	{
+		color: $highlight !important;
+		font-weight: bold;
+	}
+
+}
+
+form
+{
+	.urls
+	{
+		.input
+		{
+			display: inline-block;
+			margin-right: $field-padding;
+		}
+	}
+	input, textarea
+	{
+		margin-bottom:.25em;
+		border:none;
+		border-bottom: 1px solid $bgcolor;
+		&.required
+		{
+			border-bottom: 1px solid $errorcolor;
+		}
+	}
+	fieldset
+	{
+		margin: 0;
+		border: none;
+		border-top: 1px solid $bgcolor;
+		legend
+		{
+			padding: 0 1em 0 0;
+		}
+	}
+	.field_with_errors
+	{
+		span.error
+		{
+			margin-left: .25em;
+		}
+		input, textarea
+		{
+			border-bottom: 1px solid $errorcolor;
+		}
+	}
+	.entry_addresses_city, .entry_addresses_state, .entry_addresses_zip
+	{
+		display: inline-block;
+	}
+}
+
+.buttons
+{
+	@include span-columns($article-cols, $article-cols);
+	display:inline;
+	text-align: right;
+}

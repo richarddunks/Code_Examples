@@ -1,0 +1,26 @@
+<%= simple_form_for @entry, builder: MinimalFormBuilder do |f| %>
+	<div class="form-body">
+		<fieldset class="name">
+			<legend>
+				<h2>
+					Name
+				</h2>
+			</legend>
+			<%= f.input :first_name %>
+			<%= f.input :last_name %>
+			<%= f.input :title %>
+			<%= f.hidden_field :avatar_cache %>
+			<%= f.file_field :avatar %>
+		</fieldset>
+		<%= f.simple_fields_for :addresses do |ff| %>
+			<%= render '/entries/address/form', f:ff %>
+		<% end %>
+		<%= f.simple_fields_for :emails do |ff| %>
+			<%= render '/entries/email/form', f:ff %>
+		<% end %>
+		<%= f.simple_fields_for :webs do |ff| %>
+			<%= render '/entries/web/form', f:ff%>
+		<% end %>
+	</div>
+		<%= f.button :submit %>  
+<% end %>

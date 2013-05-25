@@ -1,0 +1,16 @@
+<%- selected = @entry && @entry.id == entry.id -%>
+<li<%=selected ? " class=selected" : ''%>>
+		<%= link_to entry do %>
+			<div class="image">
+				<%= cl_image_tag((entry.avatar.blank? ? "person_vahdmw.png" : entry.avatar), :width => 70) %>
+			</div>
+			<div class="info">
+				<p class="name">
+					<%= entry.full_name %>
+				</p>
+				<p class="title">
+					<%= entry.title %>
+				</p>
+			</div>
+		<% end %>
+</li>

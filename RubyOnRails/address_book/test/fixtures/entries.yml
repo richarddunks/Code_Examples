@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+valid:
+  first_name: John
+  last_name: Doe
+  title: Master of Universe
+  avatar: http://res.cloudinary.com/ulysseous/raw/upload/www.cloudinary.com
+
+no_first_name:
+  first_name: 
+  last_name: Doe
+
+no_last_name:
+  first_name: John
+  last_name:
+
+empty:
+  first_name:
+  last_name:

@@ -1,0 +1,122 @@
+@import "partials/base";
+
+nav
+{	
+  @include span-columns($index-cols, $total-columns);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+  padding: 0;
+	border-right: 1px solid $bgcolor;
+	div#nav-header
+	{
+		@include span-columns($index-cols, $index-cols);
+		padding: 0.5em;
+		padding-right:1em;
+		clear:both;
+		box-sizing: border-box;
+		form
+		{
+			input#search
+			{
+				@include span-columns($index-cols - 3 omega, $index-cols);
+				-webkit-appearance: searchfield;
+			}
+		}
+		h2
+		{
+			margin-top:0.25em;
+		}
+	}
+  form
+  {
+    @include prefix(1, $index-cols);
+	}
+	ul
+	{
+		margin: 0;
+		padding: 0;
+	}
+	ul#tab
+	{
+    @include span-columns(1, $index-cols);
+		box-sizing: border-box;
+		margin: 0;
+		a
+		{
+			color: darken($bgcolor,30% );
+		}
+		li
+		{
+			border-bottom: 1px solid $bgcolor;
+			border-right: 1px solid $bgcolor;
+			border-bottom-right-radius: 0.7em;
+			text-align: center;
+			padding: 0;
+			box-sizing: border-box;
+		}
+	}
+	ul#entries
+	{
+    @include span-columns($index-cols - 1 omega, $index-cols);
+    overflow: scroll;
+  	padding-left: 0;
+    line-height: 1.25em;
+    max-height: 494px;
+    float: right;
+    margin-right: 0;
+    display: inline;
+    margin-left: 0;
+    box-sizing: border-box;
+    .image
+    {
+    	@include span-columns(2, $index-cols - 1);
+    }
+    .info
+    {
+    	@include span-columns($index-cols - 3 omega, $index-cols - 1);
+    	.name
+    	{
+    		font-weight: bold;
+    	}
+    }
+	}
+  li
+  {
+	  @include no-bullet;
+	  float:left;
+	  display:inline;
+	  padding: 0.25em;
+	  @include span-columns($index-cols, $index-cols);
+	  //allow to keep lis from floating all around (fix to image-cols and text-cols)
+	}
+	.button
+	{
+		padding: 0.25em;
+		font-size: 1em;
+		@include span-columns($index-cols, $index-cols);
+
+	}
+	h2
+	{
+		display: inline;
+		@include span-columns(3,$index-cols);
+		margin:0;
+	}
+	.image
+	{
+		float:left;
+		display:inline
+	}
+	p
+	{
+		margin: 0;
+		.info
+		{
+			width:-23.52941%;
+			float:right;
+			margin-right:0;
+			margin-left:-0.5em;
+			display:inline;
+		}
+	}
+}

@@ -2,3 +2,7 @@
 *.dSYM
 *.txt
 *.dat
+*.xcf
+RubyOnRails/address_book/coverage/*
+*.sqlite3
+RubyOnRails/address_book/tmp/*
